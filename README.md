@@ -1,9 +1,13 @@
 # ApplyForJobFromScratch
 
 ### （一）基本算法
-#### 1. 排序\[[link](/sort)\]
+#### 1. 排序
+- 选择排序\[[link](/sort/selection.py)\]
+- 插入排序\[[link](/sort/insertion.py)\]
+- 冒泡排序\[[link](/sort/bubble.py)\]
 #### 2. 动态规划
-- 最长公共[子序列](/algorithms/lcs.py)/[子串](/algorithms/lcs2.py)
+- 最长公共子序列\[[Link](/algorithms/lcs.py)\]
+- 最长公共子串\[[Link](/algorithms/lcs2.py)\]
 - 最大子序和\[[link](/algorithms/max_subarray.py)\]
 
 ### （二）数据结构
