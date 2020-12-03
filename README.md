@@ -28,7 +28,9 @@
 - （多路查找树）B+树
 - 散列表
 
-### 3. 动态规划
+### 3. 图
+
+### 4. 动态规划
 - 最长公共子序列\[[Link](/algorithms/lcs.py)\]
 - 最长公共子串\[[Link](/algorithms/lcs2.py)\]
 - 最大子序和\[[link](/algorithms/max_subarray.py)\]
@@ -47,6 +49,7 @@
 ## （三）在线题库整理
 ### 1. 牛客
 - NLP部分\[[link](/nowcoder/nlp.md)\]
+- 深度学习部分\[[link](/nowcoder/dl.md)\]
 
 ### 2. Leetcode 
 #### 数学运算
@@ -57,5 +60,5 @@
 - \#321 - 拼接最大数 \[[link](/leetcode/lc#321.py)\]
 
 ### 3. 其它笔记整理
-- 中文分词技术
-- 强化学习
+- 中文分词技术 \[[link](/notes/中文分词.md)\]
+- 强化学习 \[[link](/notes/强化学习.md)\]
