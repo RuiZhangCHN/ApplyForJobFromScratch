@@ -58,6 +58,8 @@
 - 剑指Offer\#56 - 数组中数字出现的次数 II \[[link](/leetcode/jzof%2356.py)\]
 #### 单调栈
 - \#321 - 拼接最大数 \[[link](/leetcode/lc#321.py)\]
+#### 贪心算法
+- \#659 - 分割数组为连续子序列 \[[link](/leetcode/lc#659.py)\]
 
 ### 3. 其它笔记整理
 - 中文分词技术 \[[link](/notes/中文分词.md)\]
