@@ -6,17 +6,17 @@
 - 插入排序\[[link](/sort/insertion.py)\]
 - 冒泡排序\[[link](/sort/bubble.py)\]
 - 希尔排序\[[link](/sort/shell.py)\]
-- 归并排序（递归实现）\[[link](/sort/merge_recursive.py)\]
+- 归并排序(递归实现)\[[link](/sort/merge_recursive.py)\]
 - 快速排序\[[link](/sort/quick.py)\]
 - 堆排序\[[link](/sort/heap.py)\]
 
 > 参考资料：[python常见算法解析](https://www.cnblogs.com/huang-yc/p/9774287.html)
 
 ### 2.查找
-- 无序表查找
-- （有序表）二分查找
-- （有序表）插值查找
-- （有序表）斐波那契查找
+- 无序表查找\[[Link](/search/unsorted.py)\]
+- （有序表）二分查找\[[Link](/search/binary.py)\]
+- （有序表）插值查找\[[Link](/search/interpolation.py)\]
+- （有序表）斐波那契查找\[[Link](/search/fibonacci.py)\]
 - （线性索引）稠密索引
 - （线性索引）分块索引
 - （线性索引）倒排索引
