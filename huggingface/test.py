@@ -1,16 +1,25 @@
-from transformers import pipeline
+from transformers import AutoModelWithLMHead, AutoTokenizer
 
-nlp = pipeline("question-answering", model="bert-large-uncased-whole-word-masking-finetuned-squad")
+model = AutoModelWithLMHead.from_pretrained("xlnet-base-cased")
+tokenizer = AutoTokenizer.from_pretrained("xlnet-base-cased")
 
-context = r"""
-    Extractive Question Answering is the task of extracting an answer from a text given a question. An example of a
-    question answering dataset is the SQuAD dataset, which is entirely based on that task. If you would like to fine-tune
-    a model on a SQuAD task, you may leverage the examples/question-answering/run_squad.py script.
-    """
+# Padding text helps XLNet with short prompts - proposed by Aman Rusia in https://github.com/rusiaaman/XLNet-gen#methodology
+PADDING_TEXT = """In 1991, the remains of Russian Tsar Nicholas II and his family
+    (except for Alexei and Maria) are discovered.
+    The voice of Nicholas's young son, Tsarevich Alexei Nikolaevich, narrates the
+    remainder of the story. 1883 Western Siberia,
+    a young Grigori Rasputin is asked by his father and a group of men to perform magic.
+    Rasputin has a vision and denounces one of the men as a horse thief. Although his
+    father initially slaps him for making such an accusation, Rasputin watches as the
+    man is chased outside and beaten. Twenty years later, Rasputin sees a vision of
+    the Virgin Mary, prompting him to become a priest. Rasputin quickly becomes famous,
+    with people, even a bishop, begging for his blessing. <eod> </s> <eos>"""
 
-result = nlp(question="What is extractive question answering?", context=context)
-print(f"Answer: '{result['answer']}', score: {round(result['score'], 4)}, start: {result['start']}, end: {result['end']}")
+prompt = "Today the weather is really nice and I am planning on "
+inputs = tokenizer.encode(PADDING_TEXT + prompt, add_special_tokens=False, return_tensors="pt")
 
-result = nlp(question="What is a good example of a question answering dataset?", context=context)
-print(f"Answer: '{result['answer']}', score: {round(result['score'], 4)}, start: {result['start']}, end: {result['end']}")
+prompt_length = len(tokenizer.decode(inputs[0], skip_special_tokens=True, clean_up_tokenization_spaces=True))
+outputs = model.generate(inputs, max_length=250, do_sample=True, top_p=0.95, top_k=60)
+generated = prompt + tokenizer.decode(outputs[0])# [prompt_length:]
 
+print(generated)
