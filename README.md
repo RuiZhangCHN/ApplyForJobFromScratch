@@ -35,6 +35,12 @@
 - 最长公共子串\[[Link](/algorithms/lcs2.py)\]
 - 最大子序和\[[link](/algorithms/max_subarray.py)\]
 
+### 5. 递归和分治策略
+- 阶乘/斐波那契/Ackerman函数\[[Link](/algorithms/recursive/basic.py)\]
+- 全排列\[[Link](/algorithms/recursive/perm.py)\]
+- 整数划分\[[Link](/algorithms/recursive/q.py)\]
+- 汉诺塔\[[Link](/algorithms/recursive/hanoi.py)\]
+
 ## （二）数据结构
 ### 1. 堆
 - 最大堆\[[link](/heap/maxheap.py)\]
@@ -46,6 +52,7 @@
 - 二叉树最近公共祖先\[[link](/tree/same_parent.py)\]
 - 二叉搜索树最近公共祖先\[[link](/tree/same_parent_search.py)\]
 - 根据前序遍历和中序遍历重构二叉树\[[link](/tree/rebuild_tree.py)\]
+
 ## （三）在线题库整理
 ### 1. 牛客
 - NLP部分\[[link](/nowcoder/nlp.md)\]
